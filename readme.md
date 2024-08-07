@@ -10,10 +10,17 @@ An automated system for processing resumes, performing job fitment analysis, and
 
 ## Installation
 
-1. **Clone the Repository**:
+1. **Clone the Repository and get in the dir **:
    ```bash
    git clone https://github.com/yourusername/hrproject.git
-   cd hrproject/HRproject
+   cd HRproject
+1. **Install the req.txt**:
+   ```bash
+   pip install -r /content/HRproject/requirements.txt
+
+1. **run the main script**:
+   ```bash
+   python3 main.py
 
 ![alt text](image.png)
 
