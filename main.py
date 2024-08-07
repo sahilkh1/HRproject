@@ -1,15 +1,21 @@
-# main.py
+import os
 from model import ModelHandler
 from utils import Utils
 from workFlow import WorkflowManager
-
+from dotenv import load_dotenv
+load_dotenv()
 def main():
+    # Get the directory of the current script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Construct paths relative to the script directory
+    jd_path = os.path.join(script_dir, 'support', 'jd.pdf')
+    resume_directory = os.path.join(script_dir, 'support', 'resumes')
+    
+    # Initialize your classes
     utils = Utils()
     model_handler = ModelHandler()
-    
-    # Load job description and resumes
-    jd_path = './support/jd.pdf'
-    resume_directory = './support/resumes'
+   
     
     jd = utils.load_job_description(jd_path)
     resume_texts = utils.load_resumes(resume_directory)
